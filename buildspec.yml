@@ -10,7 +10,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t jenkins-nginx .
-      - docker tag jenkins-nginx:latest 588761566796.dkr.ecr.us-east-1.amazonaws.com/jenkins-nginx:latestG      
+      - docker tag jenkins-nginx:latest 588761566796.dkr.ecr.us-east-1.amazonaws.com/jenkins-nginx:latest      
   post_build:
     commands:
       - echo Build completed on `date`
