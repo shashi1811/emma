@@ -16,3 +16,5 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 588761566796.dkr.ecr.us-east-1.amazonaws.com/jenkins-nginx:latest
+  artifacts:
+  files: imagedefinitions.json
