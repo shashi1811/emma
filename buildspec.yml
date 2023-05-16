@@ -10,7 +10,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t ecs-nginx-cicd .
-      - docker docker tag ecs-nginx-cicd:latest public.ecr.aws/o0i6w3n6/ecs-nginx-cicd:latest   
+      - docker tag ecs-nginx-cicd:latest public.ecr.aws/o0i6w3n6/ecs-nginx-cicd:latest   
   post_build:
     commands:
       - echo Build completed on `date`
