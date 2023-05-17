@@ -1,7 +1,6 @@
-FROM ubuntu 
-RUN apt update 
-RUN apt install –y apache2 
-RUN apt install –y apache2-utils 
-RUN apt clean 
-EXPOSE 80
-CMD [“apache2ctl”, “-D”, “FOREGROUND”]
+# ---  Docker_projects/Docker_Nginx_Image_ECR/Dockerfile ---
+
+
+FROM nginx
+COPY index.html /usr/share/nginx/html
+EXPOSE 8080
