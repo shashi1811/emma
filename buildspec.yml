@@ -16,3 +16,8 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push public.ecr.aws/o0i6w3n6/ecs-nginx-cicd:latest
+      - echo Writing image definitions file...
+      - printf '[{"name":"nginx","imageUri":"%s"}]' public.ecr.aws/o0i6w3n6/ecs-nginx-cicd:latest > imagedefinitions.json
+      - cat imagedefinitions.json 
+artifacts:
+    files: imagedefinitions.json
